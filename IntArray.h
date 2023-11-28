@@ -23,12 +23,12 @@ public:
 		}
 		return m_data[index];
 	}
-	int getLength() { return m_length; }
-	int getMdata(int index) { return m_data[index]; }
-	void setMdata(int index, int a) { m_data[index] = a; }
-	void setLength(int length) { m_length = length; }
-	void reallocate(int newLength);
-	void resize(int newLength);
+	int getLength() { return m_length; }//возврат длины контейнера
+	int getMdata(int index) { return m_data[index]; }//возврат данных по инжексу
+	void setMdata(int index, int a) { m_data[index] = a; }//запись данных по индексу
+	void setLength(int length) { m_length = length; }//установка длины массива
+	void reallocate(int newLength);//изменение величинымассива
+	void resize(int newLength);//
 	void insertBefore(int value, int index);
 	void remove(int index);
 	void insertAtBeginning(int value) { insertBefore(value, 0); } 
